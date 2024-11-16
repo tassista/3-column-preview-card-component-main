@@ -1,0 +1,103 @@
+ :root{
+
+    --bright-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+
+    --transparent-white: hsla(0, 0%, 100%, 0.75); /*(paragraphs)*/
+    --very-light-gray: hsl(0, 0%, 95%); /*(background, headings, buttons)*/
+ }
+ 
+ 
+ *,*::before, *::after{
+    box-sizing: border-box;
+ }
+ body{
+    margin: 0;
+    padding: 0;
+    background: var(--very-light-gray);
+    font-family: "Lexend Deca", serif;
+    font-size: 15px;
+    color: var(--transparent-white);
+    height: 100vh;
+}
+.cards{
+    width: 85%;
+    max-width: 550px;
+    margin: 5rem auto;
+    display: flex;
+    flex-direction: column;
+ }
+ .orange{
+    background: var(--bright-orange);
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+ }
+ .cyan{
+    background: var(--dark-cyan);
+ }
+ .dark-cyan{
+    background: var(--very-dark-cyan);
+    border-bottom-left-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+ }
+ .card{
+    padding: 3rem;
+ }
+ .card-title{
+    font-family: "Big Shoulders Display", serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 2.625rem;
+    color: var(--very-light-gray);
+ }
+ .card-text{
+    line-height: 1.6;
+    font-size: .9rem;
+ }
+ .btn{
+    text-transform: capitalize;
+    font-family: "Lexend Deca", serif;
+    font-size: .9rem;
+    background: var(--very-light-gray);
+    color: black;
+    mix-blend-mode: screen;
+    padding: .9rem 2rem;
+    border: 2px solid var(--very-light-gray);
+    border-radius: 2rem;
+    margin-top: 1rem;
+    cursor: pointer;
+ }
+ .btn:hover,
+ .btn:active{
+    color: var(--very-light-gray);
+    background: transparent;
+ }
+ @media screen and (min-width:1140px) {
+    body{
+        display: grid;
+        place-items: center;
+    }
+    .cards{
+      max-width: 1200px;
+        flex-direction: row;
+    }
+    .orange{
+        background: var(--bright-orange);
+        border-top-left-radius: .5rem;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: .5rem;
+     }
+     .dark-cyan{
+        background: var(--very-dark-cyan);
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: .5rem;
+        border-top-right-radius: .5rem;
+     }
+     .card-text{
+        font-size: 1.07rem;
+     }
+     .btn{
+        margin-top: 5rem;
+     }
+ }
